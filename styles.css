@@ -1,0 +1,617 @@
+:root {
+  --accent: #6c63ff;
+  --bg: #0f172a;
+  --panel: rgba(15, 23, 42, 0.85);
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --max-width: 960px;
+  --shadow: 0 20px 45px rgba(15, 23, 42, 0.35);
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  color: var(--text);
+  background: linear-gradient(160deg, #1e293b 0%, #0f172a 50%, #020617 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header {
+  position: relative;
+  padding: 2.5rem 1.5rem 6rem;
+  background: radial-gradient(circle at top left, rgba(108, 99, 255, 0.35), transparent 55%),
+              radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.2), transparent 50%);
+  overflow: hidden;
+}
+
+.nav {
+  max-width: var(--max-width);
+  margin: 0 auto 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease;
+}
+
+.nav .logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav a:hover,
+.nav a:focus {
+  color: var(--accent);
+}
+
+.hero {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  text-align: left;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 8vw, 3.75rem);
+  margin-bottom: 1rem;
+  line-height: 1.05;
+}
+
+.hero p {
+  font-size: clamp(1.05rem, 3vw, 1.25rem);
+  color: var(--muted);
+  max-width: 32rem;
+  margin-bottom: 2rem;
+}
+
+.cta {
+  display: inline-block;
+  padding: 0.9rem 1.75rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta:hover,
+.cta:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 24px 55px rgba(108, 99, 255, 0.45);
+}
+
+main {
+  flex: 1;
+}
+
+.panel {
+  max-width: var(--max-width);
+  margin: -4rem auto 4rem;
+  background-color: var(--panel);
+  padding: 2.75rem;
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+}
+
+.panel h2 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+.panel p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.course {
+  background: rgba(15, 23, 42, 0.65);
+  padding: 1.75rem;
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.course h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.course p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.course:hover {
+  transform: translateY(-4px);
+  border-color: rgba(108, 99, 255, 0.65);
+}
+
+.course ul,
+.skill-card ul,
+.stacked-card ul,
+.project-points {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.course li,
+.skill-card li,
+.stacked-card li,
+.project-points li {
+  margin-bottom: 0.5rem;
+}
+
+.stacked-list {
+  display: grid;
+  gap: 1.75rem;
+  margin-top: 2rem;
+}
+
+.stacked-card {
+  padding: 1.75rem;
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  background: rgba(15, 23, 42, 0.65);
+  box-shadow: var(--shadow);
+}
+
+.stacked-card header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.stacked-card h3 {
+  margin: 0;
+  color: white;
+}
+
+.role-meta {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.role-dates {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.skill-card {
+  padding: 1.65rem;
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  background: rgba(15, 23, 42, 0.65);
+  box-shadow: var(--shadow);
+}
+
+.skill-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: white;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 1.5rem;
+  margin: 1.75rem 0 1.5rem;
+}
+
+.contact-links a,
+.resume-link {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition: color 0.2s ease;
+}
+
+.contact-links a:hover,
+.contact-links a:focus,
+.resume-link:hover,
+.resume-link:focus {
+  color: var(--accent);
+}
+
+.resume-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(108, 99, 255, 0.35);
+  background: rgba(108, 99, 255, 0.12);
+}
+
+.embed-wrapper {
+  margin-top: 2rem;
+  position: relative;
+  padding-top: 56.25%;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.embed-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: #020617;
+}
+
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
+  gap: 2.5rem;
+  padding: 2.25rem;
+  border-radius: 20px;
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  box-shadow: var(--shadow);
+  align-items: stretch;
+}
+
+.project-details h3 {
+  margin: 0 0 1rem;
+  font-size: 1.65rem;
+  color: white;
+}
+
+.project-details p {
+  margin: 0 0 1.75rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.project-points {
+  margin-bottom: 1.5rem;
+}
+
+.project-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.5rem;
+  border-radius: 999px;
+  background: rgba(108, 99, 255, 0.18);
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.project-link:hover,
+.project-link:focus {
+  background: var(--accent);
+  transform: translateY(-2px);
+}
+
+.project-preview {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: var(--shadow);
+  min-height: 320px;
+}
+
+.project-preview iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: #020617;
+}
+
+.project-card--static {
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+}
+
+.project-card--react {
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+}
+
+.project-preview--static {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(108, 99, 255, 0.35), rgba(59, 130, 246, 0.25));
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: white;
+  text-transform: uppercase;
+  padding: 1.5rem;
+}
+
+.project-preview--react {
+  background: rgba(15, 23, 42, 0.8);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.farming-sim-wrapper {
+  width: 100%;
+  max-width: 520px;
+}
+
+.farming-sim {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 18px;
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.72));
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.08);
+}
+
+.farming-sim--rain {
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.4), inset 0 0 25px rgba(59, 130, 246, 0.25);
+}
+
+.farming-sim__status {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.farming-sim__status div {
+  padding: 0.75rem;
+  border-radius: 14px;
+  background: rgba(2, 6, 23, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  text-align: center;
+}
+
+.farming-sim__status span {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.farming-sim__status strong {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 1.1rem;
+  color: white;
+}
+
+.farming-sim__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.farming-sim__controls button {
+  flex: 1 1 140px;
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: rgba(108, 99, 255, 0.18);
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+}
+
+.farming-sim__controls button:hover,
+.farming-sim__controls button:focus {
+  transform: translateY(-2px);
+  background: rgba(108, 99, 255, 0.3);
+}
+
+.farming-sim__controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.farming-sim__field {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 0.6rem;
+  padding: 0.75rem;
+  border-radius: 16px;
+  background: rgba(2, 6, 23, 0.55);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+.plot {
+  position: relative;
+  min-height: 70px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  background: linear-gradient(180deg, rgba(101, 67, 33, 0.85), rgba(63, 39, 18, 0.9));
+}
+
+.plot__soil {
+  position: absolute;
+  inset: auto 0 0;
+  height: 30%;
+  background: rgba(46, 27, 12, 0.7);
+}
+
+.plot__crop {
+  position: absolute;
+  bottom: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18%;
+  border-radius: 999px 999px 4px 4px;
+  background: linear-gradient(180deg, #22c55e, #15803d);
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.4);
+  transition: height 0.4s ease, background 0.4s ease;
+}
+
+.plot--ready .plot__crop {
+  background: linear-gradient(180deg, #facc15, #d97706);
+  box-shadow: 0 0 14px rgba(250, 204, 21, 0.45);
+}
+
+.plot--empty .plot__soil {
+  height: 100%;
+  background: rgba(46, 27, 12, 0.8);
+}
+
+.farming-sim__footer {
+  display: flex;
+  justify-content: center;
+}
+
+.farming-sim__message {
+  margin: 0;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+footer {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+footer p {
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 720px) {
+  .site-header {
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+  }
+
+  .panel {
+    margin-top: -3rem;
+    padding: 2rem;
+  }
+
+  .stacked-card {
+    padding: 1.5rem;
+  }
+
+  .stacked-card header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-card {
+    grid-template-columns: 1fr;
+    padding: 1.75rem;
+  }
+
+  .project-card--static {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card--react {
+    grid-template-columns: 1fr;
+  }
+
+  .farming-sim__status {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .farming-sim__controls {
+    flex-direction: column;
+  }
+
+  .farming-sim__controls button {
+    width: 100%;
+  }
+
+  .farming-sim__field {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .project-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-link {
+    width: 100%;
+  }
+
+  .project-preview {
+    min-height: 260px;
+  }
+}

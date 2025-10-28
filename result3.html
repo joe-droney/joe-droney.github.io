@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's Your Cut - High Marbling Result</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #8B0000;
+            --secondary: #FF6B6B;
+            --accent: #FFC0CB;
+            --dark: #2C1518;
+            --light: #FFF5F5;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        .header {
+            background-color: var(--primary);
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-family: 'Anton', sans-serif;
+            font-size: 42px;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tagline {
+            font-size: 18px;
+            margin-top: 5px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+        }
+        
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        .result-container {
+            background-color: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .result-title {
+            font-family: 'Anton', sans-serif;
+            color: var(--primary);
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+        
+        .marbling-score {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        
+        .marbling-score span {
+            color: var(--primary);
+            font-size: 32px;
+        }
+        
+        .result-description {
+            margin-bottom: 30px;
+            line-height: 1.6;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .meat-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cut-info {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: left;
+        }
+        
+        .cut-info h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .cut-info ul {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .cut-info li {
+            margin-bottom: 5px;
+        }
+        
+        .back-btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 500;
+        }
+        
+        .back-btn:hover {
+            background-color: #6B0000;
+        }
+        
+        .footer {
+            background-color: var(--primary);
+            padding: 25px;
+            text-align: center;
+            color: white;
+            margin-top: auto;
+        }
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .footer-brand {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .social-links {
+            margin: 15px 0;
+        }
+        
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--accent);
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+            
+            .result-container {
+                padding: 20px;
+            }
+            
+            .result-title {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        What's Your Cut
+        <div class="tagline">Discover Your Meat Personality</div>
+    </div>
+    
+    <div class="content">
+        <div class="result-container">
+            <h1 class="result-title">Your Result: Ribeye</h1>
+            
+            <div class="marbling-score">
+                Your Marbling Score: <span id="score">0</span>
+            </div>
+            
+            <p class="result-description">
+                With a high marbling score, you're comparable to a ribeye steak! This premium cut is known for its abundant fat marbling throughout, creating an incredibly juicy, tender, and flavorful experience that melts in your mouth.
+            </p>
+            
+            <img src="RibEye.png" alt="Ribeye Steak" class="meat-image">
+            
+            <div class="cut-info">
+                <h3>Ribeye Characteristics:</h3>
+                <ul>
+                    <li>Exceptional fat marbling throughout</li>
+                    <li>Rich, buttery flavor profile</li>
+                    <li>Supreme tenderness</li>
+                    <li>Considered one of the most premium beef cuts</li>
+                    <li>Similar cuts include: Prime Rib, Delmonico, and Cowboy Steak</li>
+                </ul>
+                
+                <h3>Cooking Tips:</h3>
+                <p>Best cooked to medium-rare for optimal flavor and texture. The high fat content makes it forgiving to cook, as it stays juicy even if slightly overcooked. The fat will render beautifully when properly prepared, creating an exceptional dining experience.</p>
+            </div>
+            
+            <a href="index.html" class="back-btn">Calculate Again</a>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                Website created by: Droney Roloff ENT.
+            </div>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Get the score from URL parameters and display it
+        document.addEventListener('DOMContentLoaded', function() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var result = urlParams.get('result');
+            
+            if (result) {
+                document.getElementById('score').textContent = result;
+            }
+        });
+    </script>
+</body>
+</html>
