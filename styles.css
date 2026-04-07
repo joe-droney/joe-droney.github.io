@@ -386,6 +386,23 @@ main {
   padding: 1.5rem;
 }
 
+.project-preview--motioncraft {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, rgba(78, 184, 240, 0.18), rgba(15, 23, 42, 0) 48%),
+              linear-gradient(145deg, rgba(14, 21, 41, 0.94), rgba(8, 13, 29, 0.98));
+  padding: 1.5rem;
+}
+
+.project-preview--motioncraft img {
+  display: block;
+  width: min(100%, 360px);
+  height: auto;
+  border-radius: 28px;
+  box-shadow: 0 18px 48px rgba(2, 6, 23, 0.4);
+}
+
 .project-preview--react {
   background: rgba(15, 23, 42, 0.8);
   padding: 1.5rem;

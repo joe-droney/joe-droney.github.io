@@ -1,0 +1,21 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="205" y="194" width="614" height="614" rx="118" fill="#1E2547" stroke="#295482" stroke-width="2"/>
+  <path d="M372 646L495 310" stroke="#27456F" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M496 310L620 646" stroke="#27456F" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M405 559H575" stroke="#46B7F2" stroke-width="16" stroke-linecap="round"/>
+  <path d="M372 646L495 310" stroke="url(#paint0_linear)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="495" cy="558" r="24" stroke="#49B7F3" stroke-width="3"/>
+  <path d="M495 523V506" stroke="#49B7F3" stroke-width="3" stroke-linecap="round"/>
+  <path d="M495 610V593" stroke="#49B7F3" stroke-width="3" stroke-linecap="round"/>
+  <path d="M460 558H443" stroke="#49B7F3" stroke-width="3" stroke-linecap="round"/>
+  <path d="M547 558H530" stroke="#49B7F3" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="495" cy="558" r="7" fill="#49B7F3"/>
+  <text x="512" y="763" text-anchor="middle" fill="#49B7F3" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="700" letter-spacing="6">MOTIONCRAFT</text>
+  <text x="512" y="794" text-anchor="middle" fill="#77C0D1" font-family="Arial, Helvetica, sans-serif" font-size="18" letter-spacing="4">AR</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="372" y1="646" x2="495" y2="310" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3D9ED3"/>
+      <stop offset="1" stop-color="#4EB8F0"/>
+    </linearGradient>
+  </defs>
+</svg>
