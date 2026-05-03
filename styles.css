@@ -56,10 +56,12 @@ body {
 .nav-links {
   display: flex;
   gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .nav a:hover,
-.nav a:focus {
+.nav a:focus,
+.nav a[aria-current="page"] {
   color: var(--accent);
 }
 
@@ -412,6 +414,257 @@ main {
   justify-content: center;
 }
 
+.motioncraft-panel {
+  overflow: hidden;
+}
+
+.section-kicker {
+  margin: 0 0 0.6rem;
+  color: #67e8f9;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.motioncraft-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(220px, 0.75fr);
+  gap: 2.25rem;
+  align-items: center;
+}
+
+.motioncraft-hero h2 {
+  margin-bottom: 1rem;
+}
+
+.motioncraft-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+
+.motioncraft-device {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+  padding: 1.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(103, 232, 249, 0.24);
+  background: radial-gradient(circle at 50% 20%, rgba(103, 232, 249, 0.18), transparent 52%),
+              linear-gradient(145deg, rgba(2, 6, 23, 0.72), rgba(15, 23, 42, 0.92));
+  box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.08), var(--shadow);
+}
+
+.motioncraft-device img {
+  width: 260px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 28px;
+  box-shadow: 0 20px 52px rgba(2, 6, 23, 0.45);
+}
+
+.motioncraft-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.motioncraft-card,
+.motioncraft-details article {
+  padding: 1.5rem;
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  background: rgba(15, 23, 42, 0.65);
+}
+
+.motioncraft-card h3,
+.motioncraft-details h3 {
+  margin: 0 0 0.8rem;
+  color: white;
+}
+
+.motioncraft-card p {
+  margin: 0;
+}
+
+.motioncraft-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.motioncraft-hardware,
+.motioncraft-team,
+.motioncraft-concept {
+  margin-top: 2.75rem;
+}
+
+.motioncraft-hardware,
+.motioncraft-team {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(280px, 1.15fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.motioncraft-hardware h2,
+.motioncraft-team h2,
+.motioncraft-concept h2 {
+  margin-bottom: 0.8rem;
+}
+
+.motioncraft-hardware p,
+.motioncraft-team p,
+.motioncraft-concept p {
+  margin-bottom: 0;
+}
+
+.hardware-card {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  background: rgba(2, 6, 23, 0.65);
+  box-shadow: var(--shadow);
+}
+
+.hardware-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 240px;
+  padding: 1.5rem;
+  object-fit: contain;
+  background: #000;
+}
+
+.team-card {
+  display: grid;
+  grid-template-columns: 132px minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  background: rgba(15, 23, 42, 0.65);
+  box-shadow: var(--shadow);
+}
+
+.team-card img {
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 67% 34%;
+  border: 3px solid rgba(103, 232, 249, 0.35);
+  box-shadow: 0 16px 36px rgba(2, 6, 23, 0.42);
+}
+
+.team-card h3 {
+  margin: 0 0 0.55rem;
+  color: white;
+}
+
+.team-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.concept-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.concept-card-grid--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.concept-card-grid--activities {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.concept-card {
+  padding: 1.5rem;
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  background: rgba(15, 23, 42, 0.65);
+}
+
+.concept-card h3 {
+  margin: 0 0 0.8rem;
+  color: white;
+}
+
+.concept-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.motioncraft-gallery {
+  margin-top: 2.75rem;
+}
+
+.motioncraft-gallery__header {
+  max-width: 44rem;
+  margin-bottom: 1.5rem;
+}
+
+.motioncraft-gallery__header h2 {
+  margin-bottom: 0.8rem;
+}
+
+.motioncraft-gallery__header p:last-child {
+  margin-bottom: 0;
+}
+
+.motioncraft-shot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.motioncraft-shot {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  background: rgba(2, 6, 23, 0.52);
+  box-shadow: var(--shadow);
+}
+
+.motioncraft-shot--wide {
+  margin-bottom: 1.25rem;
+}
+
+.motioncraft-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.motioncraft-shot-grid .motioncraft-shot img {
+  max-height: 720px;
+  object-fit: contain;
+  background: rgba(2, 6, 23, 0.7);
+}
+
+.motioncraft-shot figcaption {
+  padding: 1rem 1.15rem;
+  color: var(--muted);
+  line-height: 1.5;
+  border-top: 1px solid rgba(148, 163, 184, 0.12);
+}
+
 .farming-sim-wrapper {
   width: 100%;
   max-width: 520px;
@@ -631,5 +884,34 @@ footer p {
 
   .project-preview {
     min-height: 260px;
+  }
+
+  .motioncraft-hero,
+  .motioncraft-grid,
+  .motioncraft-details,
+  .motioncraft-shot-grid,
+  .motioncraft-hardware,
+  .motioncraft-team,
+  .concept-card-grid,
+  .concept-card-grid--two,
+  .concept-card-grid--activities {
+    grid-template-columns: 1fr;
+  }
+
+  .team-card {
+    grid-template-columns: 1fr;
+  }
+
+  .motioncraft-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .motioncraft-actions .project-link {
+    width: 100%;
+  }
+
+  .motioncraft-device {
+    min-height: 240px;
   }
 }

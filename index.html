@@ -14,6 +14,7 @@
         <a href="#about">About</a>
         <a href="#courses">Courses</a>
         <a href="#showcase">Showcase</a>
+        <a class="open-motioncraft" href="./motioncraft.html" target="_blank" rel="noopener">MotionCraft AR</a>
         <a href="#contact">Contact</a>
       </div>
     </nav>
@@ -48,7 +49,7 @@
             <li>Introduction to Computer Science</li>
             <li>AR/VR Interaction and Design</li>
             <li>Mobile App development (Android)</li>
-            <li>Design & Analysis of Efficient Algorithms</li>
+            <li>Design &amp; Analysis of Efficient Algorithms</li>
           </ul>
         </article>
         <article class="course">
@@ -194,8 +195,10 @@
             <ul class="project-points">
               <li>Built with Lens Studio (TypeScript) and Firebase/Firestore for real-time session tracking with FERPA-compliant anonymized data practices.</li>
               <li>Features a React teacher dashboard giving educators visibility into student engagement and progress across exercises.</li>
-              
             </ul>
+            <div class="project-actions">
+              <a class="project-link open-motioncraft" href="./motioncraft.html" target="_blank" rel="noopener">View Case Study</a>
+            </div>
           </div>
           <div class="project-preview project-preview--motioncraft" aria-label="MotionCraft AR app icon">
             <img src="motioncraft-ar-icon.svg" alt="MotionCraft AR icon" loading="lazy">
@@ -244,6 +247,7 @@
         </article>
       </div>
     </section>
+
   </main>
 
   <footer class="panel" id="contact">
@@ -261,6 +265,14 @@
   <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script>
+    document.querySelectorAll('.open-motioncraft').forEach((link) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        window.open(link.href, '_blank', 'noopener');
+      });
+    });
+  </script>
   <script type="text/babel">
     const { useState, useEffect, useMemo } = React;
 

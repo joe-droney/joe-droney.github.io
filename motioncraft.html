@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MotionCraft AR | Joseph Droney</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="index.html">My Portfolio</a>
+      <div class="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#courses">Courses</a>
+        <a href="index.html#showcase">Showcase</a>
+        <a href="motioncraft.html" aria-current="page">MotionCraft AR</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </nav>
+    <section class="hero">
+      <h1>MotionCraft AR</h1>
+      <p>Gesture-based augmented reality for fine motor skill practice in early elementary classrooms.</p>
+      <a class="cta" href="index.html#contact">Let's connect</a>
+    </section>
+  </header>
+
+  <main>
+    <section class="panel motioncraft-panel">
+      <div class="motioncraft-hero">
+        <div>
+          <p class="section-kicker">Featured AR Project</p>
+          <h2>Snap Spectacles Classroom Experience</h2>
+          <p>
+            MotionCraft AR is a Snap Spectacles experience built to help K&ndash;2 students practice fine motor skills through guided, gesture-based activities that feel playful while producing useful classroom progress data.
+          </p>
+          <div class="motioncraft-actions">
+            <a class="project-link" href="motioncraft-ar-icon.svg" target="_blank" rel="noopener">View App Icon</a>
+            <a class="project-link" href="index.html#showcase">Back to Showcase</a>
+          </div>
+        </div>
+        <div class="motioncraft-device" aria-label="MotionCraft AR visual identity">
+          <img src="motioncraft-ar-icon.svg" alt="MotionCraft AR icon" loading="lazy">
+        </div>
+      </div>
+
+      <div class="motioncraft-grid">
+        <article class="motioncraft-card">
+          <h3>Problem</h3>
+          <p>
+            Early elementary classrooms need engaging ways to support motor development without creating extra manual tracking work for teachers.
+          </p>
+        </article>
+        <article class="motioncraft-card">
+          <h3>Build</h3>
+          <p>
+            I prototyped the Spectacles lens in Lens Studio using TypeScript, pairing hand-motion interactions with Firebase-backed session records.
+          </p>
+        </article>
+        <article class="motioncraft-card">
+          <h3>Teacher View</h3>
+          <p>
+            A React dashboard translates student sessions into progress snapshots so educators can review engagement patterns across exercises.
+          </p>
+        </article>
+      </div>
+
+      <div class="motioncraft-details">
+        <article>
+          <h3>Core Features</h3>
+          <ul class="project-points">
+            <li>Gesture-based AR activities designed around hand movement, tracing, and target selection.</li>
+            <li>Real-time session tracking for completed activities, attempts, and engagement signals.</li>
+            <li>Anonymized student records designed with classroom privacy expectations in mind.</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Stack</h3>
+          <ul class="project-points">
+            <li>Lens Studio, TypeScript, Snap Spectacles</li>
+            <li>Firebase and Firestore for session persistence</li>
+            <li>React dashboard for teacher-facing reporting</li>
+          </ul>
+        </article>
+      </div>
+
+      <section class="motioncraft-hardware" aria-labelledby="motioncraft-hardware-title">
+        <div>
+          <p class="section-kicker">Hardware</p>
+          <h2 id="motioncraft-hardware-title">Built for Snap Spectacles</h2>
+          <p>
+            MotionCraft AR targets Snap Spectacles hardware, giving students a hands-free way to interact with classroom activities through wearable augmented reality.
+          </p>
+        </div>
+        <figure class="hardware-card">
+          <img src="assets/snap-spectacles-hardware.jpg" alt="Black Snap Spectacles hardware on a dark background" loading="lazy">
+        </figure>
+      </section>
+
+      <section class="motioncraft-team" aria-labelledby="motioncraft-team-title">
+        <div>
+          <p class="section-kicker">Team</p>
+          <h2 id="motioncraft-team-title">Team Members</h2>
+          <p>
+            MotionCraft AR was built as a classroom-focused AR project combining interaction design, education technology, and real-time progress tracking.
+          </p>
+        </div>
+        <article class="team-card">
+          <img src="assets/joseph-droney-headshot.jpeg" alt="Joseph Droney" loading="lazy">
+          <div>
+            <h3>Joseph Droney</h3>
+            <p>Developer and designer for the MotionCraft AR Spectacles prototype, Firebase session pipeline, and teacher dashboard experience.</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="motioncraft-concept" aria-labelledby="motioncraft-concept-title">
+        <div>
+          <p class="section-kicker">Project Idea</p>
+          <h2 id="motioncraft-concept-title">Key Project Idea</h2>
+          <p>
+            MotionCraft AR uses short, repeatable AR activities to turn fine motor skill practice into measurable classroom sessions. Students interact with virtual objects through hand movement, while teachers can review activity type, score, duration, and engagement data from a dashboard.
+          </p>
+        </div>
+
+        <div class="concept-card-grid">
+          <article class="concept-card">
+            <h3>Student Experience</h3>
+            <p>
+              Activities are designed to be simple enough for K&ndash;2 students to start quickly, with visual targets that encourage reaching, selecting, aiming, tracing, and controlled movement.
+            </p>
+          </article>
+          <article class="concept-card">
+            <h3>Teacher Insight</h3>
+            <p>
+              Session records give educators a lightweight way to monitor participation and progress without interrupting class flow.
+            </p>
+          </article>
+          <article class="concept-card">
+            <h3>Privacy-Aware Tracking</h3>
+            <p>
+              The data model focuses on anonymized student IDs, activity names, scores, and durations instead of unnecessary personal information.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="motioncraft-concept" aria-labelledby="motioncraft-design-title">
+        <div>
+          <p class="section-kicker">Conceptual Designs</p>
+          <h2 id="motioncraft-design-title">Interaction Concepts</h2>
+          <p>
+            The concept explores two complementary activity types: matching and basketball. Matching emphasizes controlled selection and recall, while basketball emphasizes aiming, timing, and repeat attempts.
+          </p>
+        </div>
+
+        <div class="concept-card-grid concept-card-grid--activities">
+          <article class="concept-card">
+            <h3>Matching Game</h3>
+            <p>
+              A grid of concealed cards supports scanning, selection, and repeated gesture control. The interface tracks completion time and score for each session.
+            </p>
+          </article>
+          <article class="concept-card">
+            <h3>Basketball Activity</h3>
+            <p>
+              A virtual hoop and ball create an aiming task where students practice hand positioning, movement control, and repeated motor planning.
+            </p>
+          </article>
+          <article class="concept-card">
+            <h3>Snippy Fingers</h3>
+            <p>
+              A scissor-gesture activity where young learners practice opening and closing their fingers like scissors to snip objects on screen. Kids cut along dotted lines or snip falling shapes while getting real-time visual feedback through Snap Spectacles.
+            </p>
+          </article>
+          <article class="concept-card">
+            <h3>Letter Tracing</h3>
+            <p>
+              An AR handwriting-readiness activity that guides K&ndash;2 students through tracing uppercase and lowercase letters in mid-air, using hand tracking to build muscle memory and stroke sequencing for pencil-and-paper writing.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="motioncraft-gallery" aria-labelledby="motioncraft-gallery-title">
+        <div class="motioncraft-gallery__header">
+          <p class="section-kicker">Screenshots</p>
+          <h2 id="motioncraft-gallery-title">Product Screens</h2>
+          <p>
+            These screens show the teacher dashboard session log and two AR activities from the MotionCraft experience.
+          </p>
+        </div>
+
+        <figure class="motioncraft-shot motioncraft-shot--wide">
+          <img src="assets/motioncraft-dashboard-sessions.png" alt="MotionCraft AR teacher dashboard showing session records, activities, scores, and durations" loading="lazy">
+          <figcaption>Teacher dashboard session log with Firestore-backed activity records.</figcaption>
+        </figure>
+
+        <div class="motioncraft-shot-grid">
+          <figure class="motioncraft-shot">
+            <img src="assets/motioncraft-matching-game.png" alt="MotionCraft AR matching game activity start screen" loading="lazy">
+            <figcaption>Matching game activity for gesture-based selection practice.</figcaption>
+          </figure>
+          <figure class="motioncraft-shot">
+            <img src="assets/motioncraft-basketball.png" alt="MotionCraft AR basketball game activity with hoop, score, timer, and ball" loading="lazy">
+            <figcaption>Basketball activity with score, timer, and hand-driven interaction target.</figcaption>
+          </figure>
+        </div>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
